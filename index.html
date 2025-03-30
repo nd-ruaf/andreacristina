@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrullera Andrea</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff7eb3, #ff758c);
+            color: white;
+            text-align: center;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            animation: colorChange 3s infinite alternate;
+        }
+        .container {
+            margin: 50px auto;
+            width: 90%;
+            max-width: 500px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            animation: bounceIn 1s;
+        }
+        img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: white;
+            color: #ff4081;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+        .btn:hover {
+            background: #ff4081;
+            color: white;
+        }
+        .message {
+            font-size: 18px;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 45%;
+            max-width: 100px;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid white;
+            transition: transform 0.5s;
+        }
+        .gallery img:hover {
+            transform: rotate(15deg) scale(1.2);
+        }
+        @keyframes bounceIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        @keyframes colorChange {
+            0% { color: white; }
+            100% { color: yellow; }
+        }
+    </style>
+</head>
+<body>
+    <header>¡Andrea, no se duerma que el turno apenas comienza! 🚔😂</header>
+    <div class="container">
+        <img src="https://www.lavanguardia.com/files/content_image_mobile_filter/uploads/2021/05/10/6098f1471c483.jpeg" alt="Foto de Andrea">
+        <h2>Patrullera Andrea</h2>
+        <p>Comprometida con la seguridad y el bienestar de la comunidad.</p>
+        
+        <div class="message">
+            <p>Andrea, esta página es un pequeño detalle para demostrar lo increíble que eres. Tu dedicación y valentía inspiran a todos los que te rodean. ¡Gracias por todo lo que haces! 🤩🚔</p>
+        </div>
+        
+        <div class="gallery">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMUvu87TEBWMbngsKUUoRs6L5ZJmUineyPpw&s" alt="Imagen 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoPfUHS7n84N9l2v_294lu8AVVech8bizNQw&s" alt="Imagen 2">
+        </div>
+        
+        <a href="#" class="btn" onclick="mostrarMensaje()">Haz clic si eres la mejor patrullera 🚔😆</a>
+    </div>
+    
+    <script>
+        function mostrarMensaje() {
+            alert("¡Hola Andrea! 😂 Si llegaste hasta aquí, es porque eres la patrullera más genial del turno. ¡Sigue así, campeona! 💪🚔");
+        }
+    </script>
+</body>
+</html>
