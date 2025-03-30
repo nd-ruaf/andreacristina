@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrullera Andrea - Modo Extremo 🚔🤣</title>
+    <title>Patrullera Andrea 🚔😂</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,11 +14,11 @@
             text-align: center;
         }
         header {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            font-size: 24px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            font-size: 20px;
             font-weight: bold;
-            animation: colorChange 3s infinite alternate;
+            animation: parpadeo 1s infinite alternate;
         }
         .container {
             margin: 30px auto;
@@ -28,100 +28,67 @@
             background: rgba(255, 255, 255, 0.2);
             border-radius: 15px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            animation: bounceIn 1s;
         }
         img {
             width: 100%;
             max-width: 180px;
             height: auto;
             border-radius: 50%;
-            border: 5px solid white;
-            margin-top: 20px;
-            transition: transform 0.3s;
-        }
-        img:hover {
-            transform: scale(1.2) rotate(-10deg);
+            border: 4px solid white;
+            margin-top: 15px;
         }
         .btn {
-            display: inline-block;
-            padding: 15px 20px;
-            background: yellow;
-            color: black;
+            display: block;
+            width: 80%;
+            max-width: 250px;
+            padding: 15px;
+            background: white;
+            color: #ff4081;
             text-decoration: none;
             border-radius: 10px;
+            margin: 20px auto;
             font-size: 18px;
-            margin-top: 20px;
             font-weight: bold;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-            transition: all 0.3s;
+            transition: all 0.3s ease;
         }
         .btn:hover {
-            background: red;
+            background: #ff4081;
             color: white;
             transform: scale(1.1) rotate(5deg);
         }
         .message {
-            font-size: 20px;
-            margin-top: 20px;
+            font-size: 16px;
+            margin-top: 15px;
             background: rgba(255, 255, 255, 0.3);
             padding: 15px;
             border-radius: 10px;
         }
-        .gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .gallery img {
-            width: 45%;
-            max-width: 100px;
-            height: auto;
-            border-radius: 10px;
-            border: 3px solid white;
-            transition: transform 0.5s;
-        }
-        .gallery img:hover {
-            transform: rotate(20deg) scale(1.3);
-        }
-        @keyframes bounceIn {
-            from { transform: scale(0.5); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-        @keyframes colorChange {
+        @keyframes parpadeo {
             0% { color: white; }
             100% { color: yellow; }
         }
     </style>
 </head>
 <body>
-    <header>🚨 Andrea, ¡despierte que el turno apenas empieza! 🚔🤣</header>
-    <audio id="risaAudio" src="risa.mp3" preload="auto"></audio>
+    <header>🚨 Andrea, ¡no se duerma! 😂</header>
+    <audio id="sonidoRisa" src="risa.mp3" preload="auto"></audio>
     <div class="container">
         <img src="https://www.lavanguardia.com/files/content_image_mobile_filter/uploads/2021/05/10/6098f1471c483.jpeg" alt="Foto de Andrea">
-        <h2>Patrullera Andrea</h2>
-        <p>La única que puede patrullar dormida y seguir multando. 😆🚓</p>
+        <h2>¡La patrullera más despierta del turno! 🚔😆</h2>
+        <p>Comprometida con la seguridad, ¡y con aguantar el sueño! 😴⚡</p>
         
         <div class="message">
-            <p>Andrea, si ves esto, es porque sigues despierta. ¡Milagro! 🤣 
-               Recuerda que el café es gratis... pero dormir en el turno tiene multa. 
-               ¡Patrullera en modo extremo! 🚔☕</p>
+            <p>Andrea, si ves esto, es porque sigues despierta. ¡Bien hecho! 🎖️ Pero no te confíes... 😜</p>
         </div>
         
-        <div class="gallery">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMUvu87TEBWMbngsKUUoRs6L5ZJmUineyPpw&s" alt="Imagen 1">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoPfUHS7n84N9l2v_294lu8AVVech8bizNQw&s" alt="Imagen 2">
-        </div>
-        
-        <a href="#" class="btn" onclick="mostrarMensaje()">🚔 ¡Dale click si sigues despierta! 😂</a>
+        <a href="#" class="btn" onclick="activarRisa()">😂 ¡Despiértese ya! 🚔</a>
     </div>
     
     <script>
-        function mostrarMensaje() {
-            var audio = document.getElementById("risaAudio");
-            audio.play();
-            alert("¡Hola Andrea! 😂 Si estás leyendo esto, todavía no te has dormido. ¡Sigue así, campeona! 🚓💪");
+        function activarRisa() {
+            var sonido = document.getElementById("sonidoRisa");
+            sonido.play();
+            alert("¡Andrea, despierte! 😆😂 La comunidad la necesita, no se duerma en el turno! 🚔💨");
             document.body.style.background = "linear-gradient(to right, #ff0000, #ff8800)";
             setTimeout(() => {
                 document.body.style.background = "linear-gradient(to right, #ff7eb3, #ff758c)";
@@ -130,4 +97,3 @@
     </script>
 </body>
 </html>
-
