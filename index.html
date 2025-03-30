@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrullera Andrea</title>
+    <title>Patrullera Andrea - ¡Despierta! 🚔😂</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,13 +12,14 @@
             background: linear-gradient(to right, #ff7eb3, #ff758c);
             color: white;
             text-align: center;
+            overflow: hidden;
         }
         header {
             background: rgba(0, 0, 0, 0.7);
             padding: 20px;
             font-size: 24px;
             font-weight: bold;
-            animation: colorChange 3s infinite alternate;
+            animation: parpadeo 1s infinite alternate;
         }
         .container {
             margin: 50px auto;
@@ -28,7 +29,7 @@
             background: rgba(255, 255, 255, 0.2);
             border-radius: 15px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            animation: bounceIn 1s;
+            animation: rebote 1s infinite alternate;
         }
         img {
             width: 100%;
@@ -40,7 +41,7 @@
             transition: transform 0.3s;
         }
         img:hover {
-            transform: scale(1.1);
+            transform: rotate(360deg) scale(1.2);
         }
         .btn {
             display: inline-block;
@@ -56,6 +57,7 @@
         .btn:hover {
             background: #ff4081;
             color: white;
+            transform: scale(1.2) rotate(-10deg);
         }
         .message {
             font-size: 18px;
@@ -80,27 +82,28 @@
             transition: transform 0.5s;
         }
         .gallery img:hover {
-            transform: rotate(15deg) scale(1.2);
+            transform: rotate(30deg) scale(1.5);
         }
-        @keyframes bounceIn {
-            from { transform: scale(0.5); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
+        @keyframes rebote {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-10px); }
         }
-        @keyframes colorChange {
+        @keyframes parpadeo {
             0% { color: white; }
             100% { color: yellow; }
         }
     </style>
 </head>
 <body>
-    <header>¡Andrea, no se duerma que el turno apenas comienza! 🚔😂</header>
+    <header>🚔 ¡Andrea, despierte! ¡Que el turno no se hace solo! 😂</header>
+    <audio id="sonidoRisa" src="risa.mp3" preload="auto"></audio>
     <div class="container">
         <img src="https://www.lavanguardia.com/files/content_image_mobile_filter/uploads/2021/05/10/6098f1471c483.jpeg" alt="Foto de Andrea">
-        <h2>Patrullera Andrea</h2>
-        <p>Comprometida con la seguridad y el bienestar de la comunidad.</p>
+        <h2>🚔 Patrullera Andrea: ¡Leyenda en servicio! 😂</h2>
+        <p>¡Con más café en la sangre que gasolina en la patrulla! ☕🚗</p>
         
         <div class="message">
-            <p>Andrea, esta página es un pequeño detalle para demostrar lo increíble que eres. Tu dedicación y valentía inspiran a todos los que te rodean. ¡Gracias por todo lo que haces! 🤩🚔</p>
+            <p>Andrea, si estás leyendo esto y no te has quedado dormida, felicidades. Si ya te dormiste... DESPIERTA QUE HAY OPERATIVO. 🚨😂</p>
         </div>
         
         <div class="gallery">
@@ -108,12 +111,18 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoPfUHS7n84N9l2v_294lu8AVVech8bizNQw&s" alt="Imagen 2">
         </div>
         
-        <a href="#" class="btn" onclick="mostrarMensaje()">Haz clic si eres la mejor patrullera 🚔😆</a>
+        <a href="#" class="btn" onclick="mostrarMensaje()">🚔 ¡Haz clic si necesitas un café doble! 😂☕</a>
     </div>
     
     <script>
         function mostrarMensaje() {
-            alert("¡Hola Andrea! 😂 Si llegaste hasta aquí, es porque eres la patrullera más genial del turno. ¡Sigue así, campeona! 💪🚔");
+            var audio = document.getElementById("sonidoRisa");
+            audio.play();
+            alert("¡Andrea, te estamos vigilando! 😂 Si te duermes, la patrulla fantasma te hará una visita 👀🚔");
+            document.body.style.background = "linear-gradient(to right, #ff0000, #ff8800)";
+            setTimeout(() => {
+                document.body.style.background = "linear-gradient(to right, #ff7eb3, #ff758c)";
+            }, 2000);
         }
     </script>
 </body>
